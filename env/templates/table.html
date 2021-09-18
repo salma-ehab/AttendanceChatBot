@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Attendees</title>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 style="text-align: center">List of Attendance</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+        </tr>
+        {% for student in attendees %}
+            <tr>
+                <td>{{ student.name }}</td>
+                <td>{{ student.id }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
